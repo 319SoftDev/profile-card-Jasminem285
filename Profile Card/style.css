@@ -1,0 +1,114 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+
+.container{
+    width: 100%;
+    background-color: #da9593;
+    height: 100vh;
+    padding: 10px;
+}
+
+.flip-card{
+    width: 450px;
+    height: 500px;
+    perspective: 1000px;
+    margin: 100px auto 0;
+}
+
+.flip-card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+}
+
+h1, h3, h4{
+    color:#EBD4CB;
+    padding-bottom: 20px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #890620;
+    height: 350px;
+    width: 460px;
+}
+
+.top{
+    height: 40px;
+    width: 460px;
+    background-color: #df6281;
+}
+
+.mid-top{
+    height: 40px;
+    width: 460px;
+    background-color: #d82e4a;
+}
+
+
+.front-card, .back-card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.front-card{
+    background-color: #890620;
+}
+
+.back-card{
+    background-color: #890620;
+    transform: rotateY(180deg);
+}
+
+.flip-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+
+ul{
+    list-style: none;
+    color:#EBD4CB
+}
+
+li{
+    padding-top: 5px;
+}
+
+h2{
+    color:#EBD4CB;
+    font-size: 25px;
+    text-decoration-line: underline;
+}
+
+h1{
+    font-size: 35px;
+    padding-top: 3px;
+}
+
+h4{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+@keyframes bigger{
+    0%{transform: scale(1);}
+    50%{transform: scale(1.1);}
+    100%{transform: scale(1);}
+}
+
+.Insta, .FB, .Link, .X{
+    animation-name: bigger;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
